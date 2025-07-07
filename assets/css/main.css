@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  /* Otimização de fontes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: var(--line-height-base);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+strong {
+  color: var(--strong-color);
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+}
+
+.title {
+  font-family: "Baloo Thambi 2", system-ui;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: var(--line-height-title);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  line-height: var(--line-height-base);
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  line-height: var(--line-height-base);
+}
+
+.text {
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+}
+
+.social {
+  margin: 20px 0px;
+}
+
+.social img {
+  width: 32px;
+}
+
+.social ul {
+  display: flex;
+  gap: 20px;
+}
+
+.projetos::before,
+.curso-titulo::before,
+.form::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(var(--cor-p2), var(--cor-p1));
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1100px;
+    padding: 60px 0;
+  }
+
+  span:hover {
+    color: var(--span-hover);
+  }
+}

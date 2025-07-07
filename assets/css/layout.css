@@ -1,0 +1,383 @@
+.header {
+  box-sizing: border-box;
+  background-color: var(--background-pink--1);
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 20px;
+  z-index: 101;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 99;
+}
+
+.header-menu ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+.header-menu a {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+}
+
+.toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 102;
+}
+
+.toggle .close-menu{
+  display: none; 
+}
+
+header.show .header-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+header.show .open-menu {
+  display: none;
+}
+
+header.show .close-menu {
+  display: block;
+}
+
+/* ----- estilização do Inicio ----- */
+
+#home .home {
+  margin: 100px auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#home .home h1 {
+  font-size: 3rem;
+  margin-bottom: 0px;
+}
+
+/* ----- estilização do Sobre ----- */
+
+#about .about-me {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+
+}
+
+#about .about-me .title {
+  margin-bottom: 0px;
+}
+
+#about .hobbies .content {
+  gap: 30px;
+  padding: 20px;
+}
+
+#about .aboutMe-content {
+  display: grid;
+  gap: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+#about .button {
+  justify-self: baseline;
+}
+
+#about .button img {
+  position: relative;
+}
+
+#about .button:hover img {
+  left: 3px;
+}
+
+/* ----- estilização de Educação ----- */
+
+#education .info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+#education .education {
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
+#education .education-info .year,
+#education .languages .languages-info .level {
+  position: relative;
+}
+
+#education .education-info .year p,
+#education .languages-info .level p {
+  margin-left: 20px;
+}
+
+#education .education-info .year::before,
+#education .languages .languages-info .level::before {
+  content: '';
+  background: var(--background-purple--1);
+  width: 10px;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -3;
+}
+
+#education .education .education-info,
+#education .languages .languages-info {
+  display: grid;
+  gap: 20px;
+}
+
+
+#education .languages .languages-info .level {
+  align-self: center;
+  position: relative;
+}
+
+#education .info h3 {
+  position: relative;
+  z-index: -3;
+}
+
+#education .local {
+  color: var(--local-color);
+}
+
+#education h3::before {
+  content: '';
+  background: var(--background-pink--1);
+  width: 4px;
+  height: 20px;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -3;
+}
+
+#education .paragraph {
+  margin-bottom: 2px;
+}
+
+/* ----- estilização do Contato----- */
+
+#contact form {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+#contact form .form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#contact .form .message {
+  grid-column: 1/-1;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+}
+
+textarea {
+  height: 100px;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--selection-color);
+}
+
+
+/* ----- estilização do Footer ----- */
+
+footer {
+  background: var(--background-yellow--1);
+  height: 200px;
+  border-top: 2px solid #000;
+
+}
+
+.footer-info {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.footer-info .rights {
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+footer .rights .text-righs {
+  font-size: 0.875rem;
+  line-height: var(--line-height-base);
+}
+
+.footer-info .brunaIcon {
+  justify-self: end;
+  align-self: center;
+}
+
+footer .social ul li {
+  position: relative;
+  transition: top 0.3s ease-in-out;
+}
+
+footer .social ul li:hover {
+  top: -10px;
+}
+
+/* ----- responsividade para desktop ----- */
+
+@media (min-width: 768px) {
+.toggle {
+    display: none;
+  }
+
+  .header-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: none; 
+  }
+
+  .header-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .header-menu a {
+    font-size: 1.125rem;
+    padding: 5px 10px;
+  }
+
+  .header-menu a:hover {
+  color: #fff;
+}
+
+  #home .home h1 {
+    font-size: 3.75rem;
+    margin-bottom: 0px;
+  }
+
+  #about .about-me {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #about .about-me .hobbies {
+    grid-column: 2/2;
+    grid-row: 2/-2;
+  }
+
+  #about .content {
+    gap: 40px;
+  }
+
+  #education .info {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  #education h3::before {
+    width: 20px;
+    border-radius: 4px;
+    top: 40%;
+    transform: translateY(-60%);
+  }
+
+  #contact form .form {
+  grid-template-columns: 1fr 1fr;
+}
+
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  #home .home {
+    margin: 140px 0 140px 0;
+  }
+
+  .home .social {
+    position: fixed;
+    right: 0;
+    margin-right: 18px;
+  }
+
+  .home .social ul {
+    flex-direction: column;
+  }
+
+  #about .aboutMe-content {
+    gap: 40px;
+  }
+
+}
