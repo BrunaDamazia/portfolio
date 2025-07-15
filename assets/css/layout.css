@@ -1,3 +1,4 @@
+/* ----- estilização do Header ----- */
 .header {
   box-sizing: border-box;
   background-color: var(--background-pink--1);
@@ -95,7 +96,6 @@ header.show .close-menu {
   grid-template-columns: 1fr;
   gap: 20px;
   align-items: center;
-
 }
 
 #about .about-me .title {
@@ -170,7 +170,6 @@ header.show .close-menu {
   gap: 20px;
 }
 
-
 #education .languages .languages-info .level {
   align-self: center;
   position: relative;
@@ -244,7 +243,6 @@ input:focus,
 textarea:focus {
   border: 2px solid var(--selection-color);
 }
-
 
 /* ----- estilização do Footer ----- */
 
@@ -327,7 +325,6 @@ footer .social ul li:hover {
 
   #about .about-me {
     grid-template-columns: 1fr 1fr;
-
   }
 
   #about .about-me .hobbies {
@@ -379,5 +376,4 @@ footer .social ul li:hover {
   #about .aboutMe-content {
     gap: 40px;
   }
-
 }

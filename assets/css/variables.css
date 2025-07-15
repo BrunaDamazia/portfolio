@@ -13,14 +13,11 @@
 /* cores */
 
 :root {
-  /* background */
   --background-purple--1: #C8C2DB;
   --background-pink--1: #E0B8BF;
   --background-pink--2: #F5D8DD;
   --background-green--1: #DAF2E2;
   --background-yellow--1: #FAF0C8;
-
-  /* cards */
   --card-green--1: #ADD9BC;
   --card-green--2: #DAF2E2;
   --card-green--hover: #8FBF9F;
@@ -33,14 +30,11 @@
   --card-yellow--1: #EDDC97;
   --card-yellow--2: #FAF0C8;
   --card-yellow--hover: #DBC465;
-
-  /* detalhes */
   --strong-color: #55468F;
   --span-hover: #65579C;
   --local-color: #616161;
   --selection-color: #463782;
   --dot-color: #8EB7E5;
-
 }
 
 .dot-color {
@@ -110,4 +104,3 @@
 .orange-2 {
   background: var(--card-orange--2);
 }
-
