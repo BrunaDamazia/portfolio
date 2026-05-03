@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  /* Otimização de fontes */
+  font-family: "Courier Prime", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
