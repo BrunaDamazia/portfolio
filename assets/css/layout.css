@@ -1,11 +1,9 @@
 /* ----- estilização do Header ----- */
 .header {
   box-sizing: border-box;
-  background-color: var(--background-pink--1);
   border-bottom: 2px solid #000;
   display: flex;
   justify-content: space-between;
-  position: fixed;
   top: 0;
   width: 100%;
   padding: 20px 20px;
@@ -57,8 +55,8 @@ nav {
   z-index: 102;
 }
 
-.toggle .close-menu{
-  display: none; 
+.toggle .close-menu {
+  display: none;
 }
 
 header.show .header-menu {
@@ -127,83 +125,6 @@ header.show .close-menu {
 
 /* ----- estilização de Educação ----- */
 
-#education .info {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-#education .education {
-  display: grid;
-  grid-template-columns: 1fr;
-
-}
-
-#education .education-info .year,
-#education .languages .languages-info .level {
-  position: relative;
-}
-
-#education .education-info .year p,
-#education .languages-info .level p {
-  margin-left: 20px;
-}
-
-#education .education-info .year::before,
-#education .languages .languages-info .level::before {
-  content: '';
-  background: var(--background-purple--1);
-  width: 10px;
-  height: 4px;
-  border-radius: 2px;
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -3;
-}
-
-#education .education .education-info,
-#education .languages .languages-info {
-  display: grid;
-  gap: 20px;
-}
-
-#education .languages .languages-info .level {
-  align-self: center;
-  position: relative;
-}
-
-#education .info h3 {
-  position: relative;
-  z-index: -3;
-}
-
-#education .local {
-  color: var(--local-color);
-}
-
-#education h3::before {
-  content: '';
-  background: var(--background-pink--1);
-  width: 4px;
-  height: 20px;
-  border-radius: 2px;
-  display: block;
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -3;
-}
-
-#education .paragraph {
-  margin-bottom: 2px;
-}
-
-/* ----- estilização do Contato----- */
-
 #contact form {
   display: grid;
   gap: 20px;
@@ -244,51 +165,10 @@ textarea:focus {
   border: 2px solid var(--selection-color);
 }
 
-/* ----- estilização do Footer ----- */
-
-footer {
-  background: var(--background-yellow--1);
-  height: 200px;
-  border-top: 2px solid #000;
-
-}
-
-.footer-info {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.footer-info .rights {
-  grid-column: 1/-1;
-  text-align: center;
-}
-
-footer .rights .text-righs {
-  font-size: 0.875rem;
-  line-height: var(--line-height-base);
-}
-
-.footer-info .brunaIcon {
-  justify-self: end;
-  align-self: center;
-}
-
-footer .social ul li {
-  position: relative;
-  transition: top 0.3s ease-in-out;
-}
-
-footer .social ul li:hover {
-  top: -10px;
-}
-
 /* ----- responsividade para desktop ----- */
 
 @media (min-width: 768px) {
-.toggle {
+  .toggle {
     display: none;
   }
 
@@ -300,7 +180,7 @@ footer .social ul li:hover {
     transform: none;
     opacity: 1;
     visibility: visible;
-    transition: none; 
+    transition: none;
   }
 
   .header-menu ul {
@@ -314,27 +194,6 @@ footer .social ul li:hover {
     padding: 5px 10px;
   }
 
-  .header-menu a:hover {
-  color: #fff;
-}
-
-  #home .home h1 {
-    font-size: 3.75rem;
-    margin-bottom: 0px;
-  }
-
-  #about .about-me {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #about .about-me .hobbies {
-    grid-column: 2/2;
-    grid-row: 2/-2;
-  }
-
-  #about .content {
-    gap: 40px;
-  }
 
   #education .info {
     grid-template-columns: 1fr 1fr;
@@ -349,19 +208,11 @@ footer .social ul li:hover {
   }
 
   #contact form .form {
-  grid-template-columns: 1fr 1fr;
-}
-
-  .footer-info {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1280px) {
-  #home .home {
-    margin: 140px 0 140px 0;
-  }
 
   .home .social {
     position: fixed;

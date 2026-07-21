@@ -1,13 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
+
+@layer components {
+  .card-border{
+    @apply border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-lg;
+  }
+
+  .card-decoration {
+    @apply flex px-5 py-3 gap-3  bg-secondaryLight-100 rounded-t-lg border-b-2 border-black -z-10 w-full;
+  }
+
+  .card-detail {
+    @apply inline-block h-5 w-5 rounded-full border-solid border-2 border-black bg-gray-100;
+  }
+
+  .card-content {
+    @apply grid gap-4 p-6;
+  }
+
+  .image-border {
+    @apply p-3 rounded-2xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .image {
+    @apply block max-w-full h-auto object-cover rounded-lg;
+  }
+
+  .stack-item {
+    @apply py-1 px-3 rounded-lg font-sans text-sm;;
+  }
+
+  .section-title {
+    @apply text-5xl font-display font-bold;
+
+
+  }
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-}
-
-body {
-  font-family: "Courier Prime", monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 ul {
@@ -24,11 +63,6 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 a {
   font-family: "Nunito", sans-serif;
 }
@@ -37,18 +71,10 @@ strong {
   color: var(--strong-color);
 }
 
-.container {
-  box-sizing: border-box;
-  padding: 40px 20px;
-  margin: 0 auto;
-  display: grid;
-}
+
 
 .title {
   font-family: "Baloo Thambi 2", system-ui;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  line-height: var(--line-height-title);
 }
 
 .subtitle {
@@ -93,27 +119,8 @@ strong {
 }
 
 @media (min-width: 768px) {
-  .title {
-    font-size: 3rem;
-    margin-bottom: 40px;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
 
   .paragraph {
     margin-bottom: 10px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1100px;
-    padding: 60px 0;
-  }
-
-  span:hover {
-    color: var(--span-hover);
   }
 }

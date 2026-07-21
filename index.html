@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Desenvolvedora Front End e Designer UI/UX." />
-  <title>Bruna Damazia - Front-End e Design UI/UX</title>
+  <meta name="description" content="Portfólio de Bruna Damazia, Desenvolvedora Front-End. Projetos em React, TailwindCSS, JavaScript e Figma.">
+  <title>Bruna Damazia - Front-End</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -16,17 +15,17 @@
   <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 
-<body>
-  <header id="header" class="header">
+<body class="bg-gray-100 font-sans webkit-antialiased">
+  <header id="header" class="header bg-gray-50 sticky">
     <nav>
       <img src="./assets/images/icons/brunaOpened.svg" alt="" />
       <div class="header-menu">
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#education">Formação</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a class="hover:text-primaryLight-200" href="#hero">Inicio</a></li>
+          <li><a class="hover:text-primaryLight-200" href="#about">Sobre</a></li>
+          <li><a class="hover:text-primaryLight-200" href="#education">Formação</a></li>
+          <li><a class="hover:text-primaryLight-200" href="#projects">Projetos</a></li>
+          <li><a class="hover:text-primaryLight-200" href="#contact">Contato</a></li>
         </ul>
       </div>
       <div class="toggle">
@@ -35,18 +34,21 @@
       </div>
     </nav>
   </header>
-  <section id="home" class="container">
+
+  <section id="hero" class="container pt-20 pb-7 lg:py-48">
     <div class="home">
-      <div>
-        <h1 class="title">
-          <span>O</span><span>l</span><span>á</span><span>!</span>
-          <span>S</span><span>o</span><span>u</span>
-          <span>a</span>
-          <br />
-          <span>B</span><span>r</span><span>u</span><span>n</span><span>a</span> <span>D</span><span>a</span><span>m</span><span>a</span><span>z</span><span>i</span><span>a</span>
-          <span>:)</span>
-        </h1>
-        <h2 class="subtitle">Desenvolvedora Front End e Designer UI/UX</h2>
+      <div class="grid gap-6">
+        <div>
+          <h1 class="font-display text-6xl font-bold">
+            <span>O</span><span>l</span><span>á</span><span>!</span>
+            <span>S</span><span>o</span><span>u</span>
+            <span>a</span>
+            <br />
+            <span>B</span><span>r</span><span>u</span><span>n</span><span>a</span> <span>D</span><span>a</span><span>m</span><span>a</span><span>z</span><span>i</span><span>a</span>
+            <span>:)</span>
+          </h1>
+        </div>
+        <h2 class="font-mono text-xl lg:text-2xl">Desenvolvedora Front End e Designer UI/UX</h2>
       </div>
       <div class="social">
         <ul>
@@ -57,181 +59,285 @@
       </div>
     </div>
   </section>
-  <section id="about" class="container">
-    <div class="about-me">
+
+  <section id="about" class="container py-7 lg:py-10">
+    <div class="grid gap-8 lg:gap-12 2xl:gap-16 items-center lg:grid-cols-2">
       <div class="aboutMe-content">
-        <h2 class="title">
-          Sobre mim<span class="dot-color">.</span>
+        <h2 class="section-title">
+          Sobre mim
         </h2>
-        <div>
-          <p class="paragraph">Sou estudante de análise e desenvolvimento de sistemas e entusiasta por desenvolvimento <strong>Front-End</strong> e <strong>UI design</strong>.</p>
-          <p class="paragraph">Atualmente, atuo como UI Designer e Desenvolvedora Front-End voluntária, onde coloco em prática meus conhecimentos em <strong>Tailwind</strong>, <strong>TypeScript</strong>, <strong>Next.js</strong> e design de interfaces no <strong>Figma</strong>.</p>
+        <div class="grid gap-4">
+          <p class="font-sans text-base">Trabalho na integração entre o <span class="font-bold">desenvolvimento de sistemas</span> e o <span class="font-bold">design de interfaces</span>. Sou estudante de Análise e Desenvolvimento de Sistemas e foco na criação de projetos que unem uma estrutura lógica estável a um visual funcional e bem resolvido.</p>
+          <p class="font-sans text-base">Meu fluxo de trabalho começa no <span class="font-bold">Figma</span>, onde desenvolvo o UI e UX Design focado no usuário. Para a implementação técnica, utilizo <span class="font-bold">React</span>, <span class="font-bold">JavaScript</span> e <span class="font-bold">TailwindCSS</span>, garantindo que o resultado final seja fiel ao planejamento original e responda com eficiência no navegador.</p>
+          <p class="font-sans text-base">Além da construção da interface com HTML e CSS, aplico boas práticas de organização e versionamento com o uso de <span class="font-bold">GIT</span> e <span class="font-bold">NPM</span>. Meu objetivo é sempre o equilíbrio: garantir que a tecnologia por trás do projeto seja sólida e que a experiência de quem usa seja simples, clara e direta.</p>
         </div>
-        <a class="button yellow-1-hover" href="#contact">Me contate<img src="./assets/images/icons/Arrow.svg" alt=""></a>
       </div>
-      <div class="hobbies card">
-        <div class=" project-decoration orange-1">
-          <span class="circle"></span>
-          <span class="circle"></span>
+
+      <div id="stacks" class=" border-2 border-black shadow-[8px_8px_0px_-2px_rgba(0,0,0,1)] rounded-2xl ">
+        <div class="flex px-5 py-3 gap-3 rounded-t-2xl border-b-2 border-black -z-10 w-full">
+          <span class="inline-block h-5 w-5 rounded-full border-solid border-2 border-black bg-gray-100"></span>
+          <span class="inline-block h-5 w-5 rounded-full border-solid border-2 border-black bg-gray-100"></span>
         </div>
-        <div class="content">
-          <div class="habilities-content">
-            <h3 class="subtitle">Hard Skills</h3>
-            <div>
-              <ul class="list">
-                <li class="item purple-2">HTML</li>
-                <li class="item purple-2">CSS</li>
-                <li class="item purple-2">TailwindCSS</li>
-                <li class="item purple-2">JavaScript</li>
-                <li class="item purple-2">React</li>
-                <li class="item purple-2">Git</li>
-                <li class="item purple-2">NPM</li>
-                <li class="item purple-2">Figma</li>
-                <li class="item purple-2">UI Design</li>
-                <li class="item purple-2">UX Design</li>
+        <div class="grid gap-4 p-6">
+          <h3 class="font-mono text-3xl font-bold">Stacks</h3>
+          <div>
+            <ul class="flex flex-wrap gap-2 font-sans text-sm">
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">HTML</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">CSS</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">TailwindCSS</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">JavaScript</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">React</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">GIT</li>
+              <li class="py-2 px-6 bg-primaryLight-50 rounded">NPM</li>
+              <li class="py-2 px-6 bg-secondaryLight-50 rounded">Figma</li>
+              <li class="py-2 px-6 bg-secondaryLight-50 rounded">UI Design</li>
+              <li class="py-2 px-6 bg-secondaryLight-50 rounded">UX Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="education" class="container py-7 lg:py-10 grid gap-12">
+    <h2 class="section-title">Educação</h2>
+
+    <div class="grid gap-10 md:gap-12 lg:grid-cols-2">
+      <div class="grid gap-6">
+        <h3 class="font-mono text-2xl font-bold">Formação</h3>
+        <div class="grid gap-4 font-mono text-base">
+          <div class="grid gap-2">
+            <p class="font-bold">Tecnólogo, Análise e Desenvolvimento de Sistemas</p>
+            <p>Centro Universitário Internacional (UNINTER)</p>
+          </div>
+          <div>
+            <p class="flex items-center gap-2 before:h-1 before:w-3 before:inline-block before:bg-secondaryLight-100 before:rounded-full">09/2024 - Atualmente</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid gap-4">
+        <h3 class="font-mono text-2xl font-bold">Idiomas</h3>
+        <div class="grid gap-3 font-mono text-base">
+          <div class="grid gap-2">
+            <p class="font-bold">Inglês</p>
+            <p class="">Casa de Cultura Britânica (CCB) - UFC</p>
+          </div>
+          <div>
+            <p class="flex items-center gap-2 before:h-1 before:w-3 before:inline-block before:bg-secondaryLight-100 before:rounded-full">Intermediário</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container py-7">
+    <div class="grid gap-12">
+      <div class="grid gap-4">
+        <h2 class="section-title">Projetos</h2>
+        <div class="flex flex-col gap-2 md:flex-row">
+          <span class="text-base font-mono text-primaryLight-300">[Status: Stable]</span>
+          <h3 class="font-mono text-xl">
+            Registros de projetos concluídos
+          </h3>
+        </div>
+      </div>
+      <div class="flex items-center gap-8 relative w-full">
+        <div class="hidden lg:block absolute left-full ml-8 text-tertiary-300 [writing-mode:vertical-rl] whitespace-nowrap shrink-0">
+          <span class="text-sm text-tertiary-200 hover:text-secondaryLight-300">D:\Workspace_Bruna\Public_Releases\Projects_Stable.iso</span>
+        </div>
+        <div id="cards" class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+
+          <div id="card-1" class="card-border">
+            <div class="card-decoration">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">Amigo Secreto</h3>
+              <div class="image-border">
+                <img src="./assets/images/amigoSecreto.png" alt="Amigo Secreto" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="stack-item bg-primaryLight-50">HTML</li>
+                <li class="stack-item bg-primaryLight-50">CSS</li>
+                <li class="stack-item bg-primaryLight-50">JavaScript</li>
               </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
             </div>
           </div>
+
+          <div id="card-2" class="card-border">
+            <div class="card-decoration">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">Bikcraft</h3>
+              <div class="image-border">
+                <img src="./assets/images/bikcraft.png" alt="Bikcraft" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="stack-item bg-primaryLight-50">HTML</li>
+                <li class="stack-item bg-primaryLight-50">CSS</li>
+                <li class="stack-item bg-primaryLight-50">JavaScript</li>
+              </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
+            </div>
+          </div>
+
+          <div id="card-3" class="card-border">
+            <div class="card-decoration">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">Beauty Salon</h3>
+              <div class="image-border">
+                <img src="./assets/images/beautySalon.png" alt="Beauty Salon" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2">
+                <li class="stack-item bg-primaryLight-50">HTML</li>
+                <li class="stack-item bg-primaryLight-50">CSS</li>
+                <li class="stack-item bg-primaryLight-50">JavaScript</li>
+              </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-    </div>
   </section>
-  <section id="education" class="container">
-    <h1 class="title">Educação<span class="dot-color">.</span></h1>
-    <div class="info">
-      <div class="education">
-        <h3 class="subtitle">Formação</h3>
-        <div class="education-info">
+
+  <section id="lab" class="container py-7 lg:py-10">
+    <div class="grid gap-12">
+      <div class="grid gap-4">
+        <h2 class="section-title">Lab
+        </h2>
+        <div class="flex flex-col gap-2 md:flex-row">
+          <span class="text-base font-mono text-secondaryLight-300">[Status: Staging]</span>
+          <h3 class="font-mono text-xl">
+            Design & Codificação em progresso
+          </h3>
+        </div>
+      </div>
+      <div class="flex items-center gap-8 relative w-full">
+        <div class="hidden lg:block absolute right-full mr-8 text-tertiary-300 [writing-mode:vertical-lr] rotate-180 whitespace-nowrap shrink-0">
+          <span class="inline-block font-mono text-sm text-tertiary-200 hover:text-primaryLight-300">D:\Workspace_Bruna\Lab_Environment\Experiments_WIP.tmp</span>
+        </div>
+        <div id="cards" class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+
+          <div id="lab-1" class="card-border">
+            <div class="card-decoration  bg-primaryLight-100">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">GID</h3>
+              <div class="image-border">
+                <img src="./assets/images/forest.png" alt="GID" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2 font-sans">
+                <li class="stack-item bg-secondaryLight-50">Tailwind</li>
+                <li class="stack-item bg-secondaryLight-50">JavaScript</li>
+                <li class="stack-item bg-secondaryLight-50">React</li>
+                <li class="stack-item bg-secondaryLight-50">UI/UX Design</li>
+              </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="/pages/gid.html">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
+            </div>
+          </div>
+
+          <div id="lab-2" class="card-border">
+            <div class="card-decoration  bg-primaryLight-100">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">Café & Confeitaria</h3>
+              <div class="image-border">
+                <img src="./assets/images/amelieCafeConfeitaria.png" alt="Amelie Cafeteria e Confeitaria" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2 font-sans">
+                <li class="stack-item bg-secondaryLight-50">Tailwind</li>
+                <li class="stack-item bg-secondaryLight-50">JavaScript</li>
+                <li class="stack-item bg-secondaryLight-50">React</li>
+                <li class="stack-item bg-secondaryLight-50">UI Design</li>
+              </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
+            </div>
+          </div>
+
+          <div id="lab-3" class="card-border">
+            <div class="card-decoration  bg-primaryLight-100">
+              <span class="card-detail"></span>
+              <span class="card-detail"></span>
+            </div>
+            <div class="card-content">
+              <h3 class="font-mono text-2xl font-bold">Lírio do Vale</h3>
+              <div class="image-border">
+                <img src="./assets/images/lirioDoVale.png" alt="Lírio do Vale" class="image">
+              </div>
+              <ul class="flex flex-wrap gap-2 font-sans">
+              <ul class="flex flex-wrap gap-2 font-sans">
+                <li class="stack-item bg-secondaryLight-50">Tailwind</li>
+                <li class="stack-item bg-secondaryLight-50">JavaScript</li>
+                <li class="stack-item bg-secondaryLight-50">React</li>
+                <li class="stack-item bg-secondaryLight-50">UI Design</li>
+              </ul>
+              <!-- <div class="flex gap-2">
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Info</a>
+                <a class="flex text-center font-sans font-medium border-solid border-2 border-black py-3 px-4 rounded-lg" href="#projects">Ver Projeto</a>
+              </div> -->
+            </div>
+          </div>
+  </section>
+
+  <section id="contact" class="container py-7 lg:py-10">
+    <div class="grid gap-12">
+      <h1 class="section-title">Contato</h1>
+      <form action="https://api.web3forms.com/submit" method="POST" class="card-border ">
+        <div class="form">
           <div>
-            <p class="paragraph"><strong>Tecnólogo, Análise e Desenvolvimento de Sistemas</strong></p>
-            <p class="text local">Centro Universitário Internacional (UNINTER)</p>
+            <input type="hidden" name="access_key" value="392f071b-6f05-4613-8282-711461eb12bd">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Seu nome" required>
           </div>
-          <div class="year">
-            <p class="text">09/2024 - Atualmente</p>
-          </div>
-        </div>
-      </div>
-      <div class="languages">
-        <h3 class="subtitle">Idiomas</h3>
-        <div class="languages-info">
           <div>
-            <p class="paragraph"><strong>Inglês</strong></p>
-            <p class="text local">Casa de Cultura Britânica (CCB) - UFC</p>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="voce@exemplo.com" required>
           </div>
-          <div class="level">
-            <p class="text">Intermediário</p>
+          <div class="message">
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="message" placeholder="Mensagem" required></textarea>
           </div>
         </div>
-      </div>
+        <button class="button bg-tertiary-100 hover:bg-tertiary-200" type="submit">Enviar<img src="./assets/images/icons/Arrow.svg" alt=""></button>
+      </form>
     </div>
   </section>
-  <section id="projects" class="container">
-    <h1 class="title">Projetos<span class="dot-color">.</span></h1>
-    <div class="cards">
-      <div class="card">
-        <div class="project-decoration green-1">
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        <div class="content">
-          <h2 class="subtitle">Forest</h2>
-          <img src="./assets/images/forest.png" alt="Forest" class="image-content">
-          <ul class="list">
-            <li class="item green-2">HTML</li>
-            <li class="item green-2">Tailwind</li>
-            <li class="item green-2">JavaScript</li>
-          </ul>
-          <!-- <a class="button green-1-hover" href="#projects">Ver Projeto</a> -->
-        </div>
-      </div>
-      <div class="card">
-        <div class="project-decoration orange-1">
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        <div class="content">
-          <h2 class="subtitle">Amigo Secreto</h2>
-          <img src="./assets/images/amigoSecreto.png" alt="Amigo Secreto" class="image-content">
-          <ul class="list">
-            <li class="item orange-2">HTML</li>
-            <li class="item orange-2">CSS</li>
-            <li class="item orange-2">JavaScript</li>
-          </ul>
-          <!-- <a class="button orange-1-hover" href="#projects">Ver Projeto</a> -->
-        </div>
-      </div>
-      <div class="card">
-        <div class="project-decoration purple-1">
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        <div class="content">
-          <h2 class="subtitle">Beauty Salon</h2>
-          <img src="./assets/images/beautySalon.png" alt="Salão de beleza" class="image-content">
-          <ul class="list">
-            <li class="item purple-2">HTML</li>
-            <li class="item purple-2">CSS</li>
-            <li class="item purple-2">JavaScript</li>
-          </ul>
-          <a class="button purple-1-hover" href="https://brunadamazia.github.io/beautySalon/">Ver Projeto</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="project-decoration yellow-1">
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        <div class="content">
-          <h2 class="subtitle">Bikcraft</h2>
-          <img src="./assets/images/bikcraft.png" alt="Bikcraft - loja de bicicletas" class="image-content">
-          <ul class="list">
-            <li class="item yellow-2">HTML</li>
-            <li class="item yellow-2">CSS</li>
-            <li class="item yellow-2">JavaScript</li>
-          </ul>
-          <a class="button yellow-1-hover" href="https://brunadamazia.github.io/Bikcraft/">Ver Projeto</a>
-        </div>
-      </div>
-  </section>
-  <section id="contact" class="container">
-    <h1 class="title">Contato<span class="dot-color">.</span></h1>
-    <form action="https://api.web3forms.com/submit" method="POST" class="card">
-      <div class="form">
-        <div>
-          <input type="hidden" name="access_key" value="392f071b-6f05-4613-8282-711461eb12bd">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Seu nome" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="voce@exemplo.com" required>
-        </div>
-        <div class="message">
-          <label for="message">Mensagem</label>
-          <textarea name="message" id="message" placeholder="Mensagem" required></textarea>
-        </div>
-      </div>
-      <button class="button green-1-hover arrow-animation" type="submit">Enviar<img src="./assets/images/icons/Arrow.svg" alt=""></button>
-    </form>
-  </section>
-  <footer>
-    <div class="container footer-info">
-      <div class="social">
-        <ul>
-          <li><a href="https://github.com/BrunaDamazia"><img src="./assets/images/icons/github.svg" alt=""></a></li>
-          <li><a href="https://discordapp.com/users/brunadamazia"><img src="./assets/images/icons/discord.svg" alt=""></a></li>
-          <li><a href="https://www.linkedin.com/in/brunadamazia/"><img src="./assets/images/icons/linkedin.svg" alt=""></a></li>
-        </ul>
-      </div>
-      <div class="brunaIcon">
-        <img src="./assets/images/icons/brunaClosed.svg" alt="" />
-      </div>
-      <div class="rights">
-        <p class="text-righs">Copyright © 2025 Bruna Damazia</p>
-      </div>
+
+  <footer class="mt-10 w-full h-auto bg-primaryLight-50 border-t-2 border-black">
+    <div class="container py-6 grid gap-2 items-center justify-center center text-center 
+    font-sans text-sm">
+      <p>© 2026 Bruna Damazia. Todos os Direitos Reservados.</p>
     </div>
   </footer>
+
   <script src="./assets/js/app.js"></script>
 </body>
 
